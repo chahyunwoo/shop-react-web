@@ -36,6 +36,16 @@ function Detail({ goods }) {
 		};
 	}, []);
 
+	useEffect(() => {
+		let Data = localStorage.getItem('watched');
+		Data = JSON.parse(Data);
+		Data.push(goodsId.id);
+		Data = new Set(Data);
+		Data = Array.from(Data);
+
+		localStorage.setItem('watched', JSON.stringify(Data));
+	}, []);
+
 	return (
 		<Container className={`start ${fade}`}>
 			{show ? (

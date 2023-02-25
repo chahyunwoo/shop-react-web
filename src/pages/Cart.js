@@ -1,23 +1,20 @@
 import { Table } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { plusCount, minusCount, deleteCart } from '../store/cartSlice';
-import { plusAge } from '../store/userSlice';
+
+function LoopFunc() {
+	return;
+}
 
 function Cart() {
 	const state = useSelector((state) => state);
 	const dispatch = useDispatch();
 
+	const result = LoopFunc();
+
 	return (
 		<>
-			<h6>
-				{state.user.name}의 장바구니 {state.user.age}
-			</h6>
-			<button
-				onClick={() => {
-					dispatch(plusAge(1));
-				}}>
-				버튼
-			</button>
+			<h6>{state.user.name}의 장바구니</h6>
 
 			<Table striped bordered hover>
 				<thead>

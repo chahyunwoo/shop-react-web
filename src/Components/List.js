@@ -9,18 +9,20 @@ const TitleLink = styled(Link)`
 
 function List({ good, index }) {
 	return (
-		<Col sm={4}>
-			<img
-				src={`https://codingapple1.github.io/shop/shoes${index + 1}.jpg`}
-				alt='image'
-				width='80%'
-			/>
-			<h4>
-				<TitleLink to={`/detail/${index}`}>{good.title}</TitleLink>
-			</h4>
-			<p>{good.content}</p>
-			<p>{good.price}</p>
-		</Col>
+		<>
+			<Col sm={4}>
+				<img
+					src={`https://codingapple1.github.io/shop/shoes${index + 1}.jpg`}
+					alt='image'
+					width='80%'
+				/>
+				<h4>
+					<TitleLink to={`/detail/${index}`}>{good.title}</TitleLink>
+				</h4>
+				<p>{good.content}</p>
+				<p>{good.price}</p>
+			</Col>
+		</>
 	);
 }
 
